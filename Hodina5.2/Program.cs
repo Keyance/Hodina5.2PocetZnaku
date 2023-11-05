@@ -21,14 +21,11 @@ for  (int i = 0; i < text.Length; i++)
     else { znaky.Add(text[i], 1); }
 }
 
+//je nutno dávat ve forech aktuálníIterace.Value, nikoliv kolekce.Value !!
 
-//je potřeba key value pair zapsat do konzole, přijít na to jak...
-foreach (var key in znaky.Keys)
+foreach (var znak in znaky)
 {
-    Console.WriteLine($"Key: {key}");
-}
-
-foreach (var value in znaky.Values)
-{
-    Console.WriteLine($"\tValue: {value}");
+    char nazev = znak.Key;
+    int pocet = znak.Value;
+    Console.WriteLine($"{nazev}: {pocet}");
 }
