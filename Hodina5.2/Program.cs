@@ -1,5 +1,5 @@
 ﻿using static System.Formats.Asn1.AsnWriter;
-
+Console.WriteLine("Prosím, zadejte text, ve kterém chcete spočítat znaky:");
 string text = Console.ReadLine();
 
 var znaky = new Dictionary<char, int>();
